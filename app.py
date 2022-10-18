@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request, render_template
 import time
 import random
+from predict import predict
+from predict import run
 
 app = Flask(__name__)
 
@@ -24,6 +26,7 @@ def process():
        # print(transcription)
        grade = request.form.get('grade')
        int_rate = request.form.get("int_rate")
+       loan_amnt = request.form.get("loan_amnt")
        emp_title = request.form.get("emp_title")
        emp_length = int(request.form.get("emp_length"))
        home_ownership = request.form.get("home_ownership")
@@ -33,7 +36,8 @@ def process():
        dti = request.form.get("dti")
        ## process request
        time.sleep(5)
-       prediction=random.choice(["able","enable"])
+       #prediction=random.choice(["able","enable"])
+       prediction=run(term,grade,int_rate,loan_amnt,emp_title,emp_length,home_ownership,verification_status,annual_inc,purpose,dti)
        return {"name":full_name,"prediction":prediction}
 
 

@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Booking Form HTML Template</title>
+	<title>Prosper - Loans</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,600" rel="stylesheet">
@@ -82,10 +82,17 @@
 
 								</div>
 							</div>
-                            <div class="col-md-8">
+                            <div class="col-md-4">
 								<div class="form-group">
                                     <span class="form-label">Interest Rate</span>
 									<input name="int_rate" id="int_rate" class="form-control" type="number" min="10" max="100" placeholder="interest rate (percentage)">
+
+								</div>
+							</div>
+                            <div class="col-md-4">
+								<div class="form-group">
+                                    <span class="form-label">Loan Amount</span>
+									<input name="loan_amnt" id="loan_amnt" class="form-control" type="text" min="10" max="100" placeholder="loan amount">
 
 								</div>
 							</div>
@@ -270,6 +277,7 @@
             term: $("#term").val(),
             grade: $("#grade").val(),
             int_rate: $("#int_rate").val(),
+            loan_amnt: $("#loan_amnt").val(),
             emp_title: $("#emp_title").val(),
             emp_length: $("#emp_length").val(),
             home_ownership: $("#home_ownership").val(),
