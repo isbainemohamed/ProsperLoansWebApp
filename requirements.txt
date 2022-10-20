@@ -1,0 +1,5 @@
+Flask==2.2.2
+pandas==1.1.5
+numpy==1.22.3
+joblib==0.14.1
+azureml==0.2.7
